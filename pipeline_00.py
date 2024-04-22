@@ -74,7 +74,7 @@ def salvar_no_postgres(df_duckdb, tabela):
                            
 
 if __name__ == "__main__":
-    url_pasta = 'https://drive.google.com/drive/folders/1rT_avwOD1BAs8wdvNe8XTs4zKyaLRNY8'
+    url_pasta = os.getenv("GOOGLEDRIVE_URL")
     diretorio_local = './pasta_gdown'
     baixar_os_arquivos_do_google_drive(url_pasta, diretorio_local)
     lista_de_arquivos = listar_arquivos_csv(diretorio_local)
